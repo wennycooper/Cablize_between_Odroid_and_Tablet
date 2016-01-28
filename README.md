@@ -2,6 +2,8 @@
 
 # Introduction
 * This document describe how to config Odroid to have a wired ethernet-like network interface with Tablet.
+* The ROS_MASTER_URI will be fixed in "http://192.168.42.180:11311"
+* The CONS is, we will have problem to see map in rviz in another computer
 
 # Procedures
 * make sure the NetworkManager.conf content
