@@ -5,6 +5,7 @@
 
 # Procedures
 * make sure the NetworkManager.conf content
+
         odroid@odroid:~$ cat /etc/NetworkManager/NetworkManager.conf 
         [main]
         plugins=ifupdown,keyfile,ofono
@@ -13,6 +14,7 @@
         [ifupdown]
         managed=false
 * make sure the /etc/network/interfaces
+
         $ cat /etc/network/interfaces
         # interfaces(5) file used by ifup(8) and ifdown(8)
         # Include files from /etc/network/interfaces.d:
@@ -26,6 +28,7 @@
            gateway 192.168.42.129
            dns-nameservers 8.8.8.8
 * make sure the ROS_IP=192.168.42.180 in ~/.bashrc
+
         $ cat ~/.bashrc
         #export ROS_IP=`/sbin/ifconfig | awk -F'[ :]+' '/Bcast/{print $4}'`
         export ROS_IP=192.168.42.180
