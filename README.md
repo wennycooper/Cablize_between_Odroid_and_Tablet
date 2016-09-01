@@ -2,8 +2,7 @@
 
 # Introduction
 * This document describe how to config Odroid to have a wired ethernet-like network interface with Tablet.
-* The ROS_MASTER_URI will be fixed in "http://192.168.42.180:11311"
-* The CONS is, we will have problem to see map in rviz in another computer
+* The ROS_MASTER_URI on Tablet will be fixed to "http://192.168.42.180:11311"
 
 # Procedures
 * make sure the NetworkManager.conf content
@@ -29,8 +28,4 @@
            network 192.168.42.0
            gateway 192.168.42.129
            dns-nameservers 8.8.8.8
-* make sure the ROS_IP=192.168.42.180 in ~/.bashrc
-
-        $ cat ~/.bashrc
-        #export ROS_IP=`/sbin/ifconfig | awk -F'[ :]+' '/Bcast/{print $4}'`
-        export ROS_IP=192.168.42.180
+* The environment variable of ROS_IP can still be set to the IP address of WLAN0
